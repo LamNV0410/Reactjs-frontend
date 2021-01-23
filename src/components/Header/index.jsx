@@ -1,0 +1,41 @@
+import React from 'react';
+
+function Header(props) {
+    return (
+        <div className="header">
+            <div className="container">
+                <div className="navbar">
+                    <div className="logo">
+                        <img src='images/logo.png' width="125px" />
+                    </div>
+                    <nav>
+                        <ul id="menu-item">
+                            <li><a href='/'>Home</a></li>
+                            <li><a href='/products'>Products</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Contact</a></li>
+                            <li><a>Account</a></li>
+                        </ul>
+                    </nav>
+                    <a href='/cart'><img src="images/cart.png" width="30px" height="30px" /></a>
+                    <img src="images/menu.png" className="nenu-icon" onClick="menutoggle()" />
+                </div>
+                <div className="row">
+                    <div className="col-2">
+                        <h1>Give Your Workout <br /> A New Style</h1>
+                        <p>Success isn't always about greateness. It's about consistency
+                            . Consistent <br /> hard work gains success.
+                                Greatness will come.
+                    </p>
+                        <a className="btn">Explore Now →</a>
+                    </div>
+                    <div className="col-2">
+                        <img src="images/image1.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Header;
