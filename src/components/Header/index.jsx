@@ -20,7 +20,7 @@ function Header(props) {
                     <a href='/cart'><img src="images/cart.png" width="30px" height="30px" /></a>
                     <img src="images/menu.png" className="nenu-icon" onClick="menutoggle()" />
                 </div>
-                <div className="row">
+                {props.isHomePage ? <div className="row">
                     <div className="col-2">
                         <h1>Give Your Workout <br /> A New Style</h1>
                         <p>Success isn't always about greateness. It's about consistency
@@ -32,7 +32,7 @@ function Header(props) {
                     <div className="col-2">
                         <img src="images/image1.png" />
                     </div>
-                </div>
+                </div> : ''}
             </div>
         </div>
     );

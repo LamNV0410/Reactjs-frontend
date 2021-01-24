@@ -10,8 +10,13 @@ import {
 } from "react-router-dom";
 import Product from './components/Product';
 import Cart from './components/Cart';
+import ProductDetail from './components/Product-Detail';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    console.log();
+  })
   return (
     <Router>
 
@@ -28,6 +33,11 @@ function App() {
           <Route exact path="/cart">
             <Cart />
           </Route>
+
+          <Route exact path='/product-detail/:id'>
+            <ProductDetail />
+          </Route>
+
           {/* <Route path="/">
             <Home />
           </Route> */}

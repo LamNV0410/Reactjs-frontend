@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 
 function RatingSelected(props) {
-    useEffect(()=>{
+    useEffect(() => {
         console.log(props.classIsSelected);
-    },[props.value])
+    }, [props.value])
     return (
         <i className={props.classIsSelected}
             onClick={() => props.setRatingValue(props.value)}
-            onMouseEnter ={() => props.setMouseEnter(props.value)}
-            onMouseLeave ={() => props.setMouseLeave(props.value)}
+            onMouseEnter={() => props.setMouseEnter(props.value)}
+            onMouseLeave={() => props.setMouseLeave(props.value)}
         />
     );
 }
