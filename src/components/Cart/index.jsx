@@ -61,7 +61,7 @@ function Cart(props) {
                         </tr>
                         <tr>
                             <td>Total</td>
-                            <td>${total - tax}.00</td>
+                            <td>${total - tax }.00</td>
                         </tr>
                     </tbody></table>
             </div>
