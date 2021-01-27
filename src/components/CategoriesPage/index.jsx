@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { saveCategories } from '../CategoriesPage/categorySlice'
-import _ from 'lodash'
 import Category from '../Category';
 
 function CategoriesPage(props) {
@@ -10,7 +9,6 @@ function CategoriesPage(props) {
     const dispatch = useDispatch();
 
     // save categories in state to use
-    const listCategories = useSelector(state => state.categories);
 
     const [categories, setCategories] = useState([]);
 
@@ -26,17 +24,15 @@ function CategoriesPage(props) {
         const action = saveCategories(categories);
         dispatch(action);
         setCategories(categories);
-        console.log("🚀 ~ file: index.jsx ~ line 36 ~ useEffect ~ categories", categories)
-
-    }, [])
+    }, [dispatch])
     return (
         <div className="categories">
             <div className="small-container">
                 <div className="row">
                     {
                         categories.map((item, index) => (
-                            <div className="col-3">
-                                <Category category ={item}/>
+                            <div key={index} className="col-3">
+                                <Category category={item} />
                             </div>
                         ))
                     }

@@ -3,7 +3,7 @@ import React from 'react';
 function Category(props) {
     return (
         <div className="col-3">
-            <img src={props.category.urlImage} />
+            <img src={props.category.urlImage} alt='information' />
         </div>
     );
 }

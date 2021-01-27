@@ -9,12 +9,12 @@ function Footer(props) {
                         <h3>Download Our App</h3>
                         <p>DownLoad App for Android and IOS mobile phone!</p>
                         <div className="app-logo">
-                            <img src="images/play-store.png" />
-                            <img src="images/app-store.png" />
+                            <img src="/images/play-store.png" alt="infomation-show"/>
+                            <img src="/images/app-store.png" alt="infomation-show"/>
                         </div>
                     </div>
                     <div className="footer-col-2">
-                        <img src="images/logo-white.png" />
+                        <img src="/images/logo-white.png" alt="infomation-show"/>
                         <p>Our Purpose Is To Sustainably Make the Pleasure and Benfits of Sprot
                         Accessible to the Many
                         </p>

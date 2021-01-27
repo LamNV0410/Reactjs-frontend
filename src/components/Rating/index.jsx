@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import RatingSelected from './RatingSelected';
 
 function StarRating(props) {
@@ -7,6 +7,14 @@ function StarRating(props) {
 
     const handleSetRatingValue = (value) => {
         setRating(value);
+        // Post Rating
+        // axios.get(`https://localhost:5001/api/products/${id}`)
+        //     .then(res => {
+        //         const action = addProductDetail(res.data);
+        //         dispatch(action);
+        //     })
+        //     .catch(error => console.log(error));
+        //     history.push(`/product-detail/${id}`);
     }
 
     const handleMouseLeave = (value) => {
@@ -23,6 +31,7 @@ function StarRating(props) {
                 const ratingValue = i + 1;
                 return (
                     <RatingSelected
+                        key={i}
                         value={ratingValue}
                         classIsSelected={ratingValue <= (hover || rating) ? "fa fa-star" : "fa fa-star-o"}
                         setRatingValue={handleSetRatingValue}

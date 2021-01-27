@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 function FeatureProduct(props) {
 
     // state save featureProduct
-    const [featureProduct, useFeatureProduct] = useState("");
 
     // get feature Product from API or get it into redux store
-    useEffect(()=>{
+    useEffect(() => {
 
-    },[]);
+    }, []);
 
-    
+
     return (
         <div className="small-container">
             <h2 className="title">Featured Products</h2>
             <div className="row">
                 <div className="col-4">
-                    <img src="images/product-1.jpg" />
+                    <img src="images/product-1.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -28,7 +27,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-2.jpg" />
+                    <img src="images/product-2.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -40,7 +39,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-3.jpg" />
+                    <img src="images/product-3.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -52,7 +51,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-4.jpg" />
+                    <img src="images/product-4.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -67,7 +66,7 @@ function FeatureProduct(props) {
             <h2 className="title">Featured Products</h2>
             <div className="row">
                 <div className="col-4">
-                    <img src="images/product-5.jpg" />
+                    <img src="images/product-5.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -79,7 +78,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-6.jpg" />
+                    <img src="images/product-6.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -91,7 +90,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-7.jpg" />
+                    <img src="images/product-7.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -103,7 +102,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-8.jpg" />
+                    <img src="images/product-8.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -115,7 +114,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-9.jpg" />
+                    <img src="images/product-9.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -127,7 +126,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-10.jpg" />
+                    <img src="images/product-10.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -139,7 +138,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-11.jpg" />
+                    <img src="images/product-11.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />
@@ -151,7 +150,7 @@ function FeatureProduct(props) {
                     <p>$50.00</p>
                 </div>
                 <div className="col-4">
-                    <img src="images/product-12.jpg" />
+                    <img src="images/product-12.jpg" alt='information' />
                     <h4>Red Printed T-shirt</h4>
                     <div className="rating">
                         <i className="fa fa-star" />

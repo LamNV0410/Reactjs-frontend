@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 
 function RatingSelected(props) {
     useEffect(() => {
-        console.log(props.classIsSelected);
     }, [props.value])
     return (
         <i className={props.classIsSelected}

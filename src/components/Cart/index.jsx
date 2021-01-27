@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import CartDetail from '../CartDetail';
 
 function Cart(props) {
     const { cart } = useSelector(state => state.carts);
-    let total = 0;
-    let tax = 200;
-    // const [total, setTotal] = useState(0);
-    console.log("🚀 ~ file: index.jsx ~ line 6 ~ Cart ~ cartValue", cart)
+    let sum = 0;
+    const handleSumTotalCalc = (value) => {
+    }
+
+    useEffect(() => {
+
+    })
     return (
         <div className="small-container cart-page">
             <table>
@@ -22,29 +26,17 @@ function Cart(props) {
                     </th>
                 </tr>
                     {cart && cart.map((product, i) => {
-                        let { name, originalPrice } = product.product;
-                        let { count } = product;
-                        let simpleSubTotal = originalPrice * count;
-                        total += simpleSubTotal;
+                        console.log(product.product)
+                        sum += product.product.originalPrice * product.count;
+                        console.log("🚀 ~ file: index.jsx ~ line 32 ~ {cart&&cart.map ~ product", product)
+
+                        console.log("🚀 ~ file: index.jsx ~ line 32 ~ {cart&&cart.map ~ product.count", product.count)
                         return (
-                            <tr>
-                                <td>
-                                    <div className="cart-info">
-                                        <img src="image/buy-1.jpg" alt />
-                                        <div>
-                                            <p>{name}</p>
-                                            <small> Price : ${originalPrice}</small>
-                                            <a href>Remove</a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <input type="number" min={1} defaultValue={product.count} />
-                                </td>
-                                <td>
-                                    ${simpleSubTotal}.00
-                            </td>
-                            </tr>
+                            <CartDetail
+                                key={i}
+                                cartDetail={product}
+                                handleSumTotal={handleSumTotalCalc}
+                            />
                         )
                     })}
                 </tbody>
@@ -53,15 +45,15 @@ function Cart(props) {
                 <table>
                     <tbody><tr>
                         <td>Subtotal</td>
-                        <td>{total}</td>
+                        <td>{sum}.00</td>
                     </tr>
                         <tr>
                             <td>Tax</td>
-                            <td>${tax}.00</td>
+                            <td>${20}.00</td>
                         </tr>
                         <tr>
                             <td>Total</td>
-                            <td>${total - tax }.00</td>
+                            <td>${sum + 20}.00</td>
                         </tr>
                     </tbody></table>
             </div>

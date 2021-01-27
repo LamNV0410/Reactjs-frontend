@@ -7,7 +7,7 @@ const rootReducer = {
   products: productReducer,
   categories: categoryReducer,
   carts: cartReducer,
-  productDetail: productDetailReducer
+  productDetail: productDetailReducer,
 }
 
 const store = configureStore({

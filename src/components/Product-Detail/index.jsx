@@ -1,19 +1,22 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { addToCart } from '../cartSlice';
 import StarRating from '../Rating';
 
 function ProductDetail(props) {
     const [product, setProduct] = useState({});
+    let { originalPrice, name } = product;
     const [count, setCount] = useState(1);
-
-    const selector = useSelector(state => state.productDetail);
-    
+    const { id } = useParams();
     useEffect(() => {
-        setProduct(selector);
-        console.log("🚀 ~ file: index.jsx ~ line 10 ~ useEffect ~ selector", selector)
-    }, [selector]);
-
+        axios.get(`https://localhost:5001/api/products/${id}`)
+            .then(res => {
+                setProduct(res.data);
+            })
+            .catch(error => console.log(error));
+    },[id]);
 
     const dispatch = useDispatch();
     const handleAddToCart = () => {
@@ -21,7 +24,7 @@ function ProductDetail(props) {
             product,
             count
         };
-    const action = addToCart(valueAddToCart);
+        const action = addToCart(valueAddToCart);
 
         dispatch(action)
     }
@@ -30,30 +33,28 @@ function ProductDetail(props) {
         <div className="small-container single-product">
             <div className="row">
                 <div className="col-2">
-                    <img src="images/product-1.jpg" width='100%' />
+                    <img src="/images/product-1.jpg" width='100%' alt='infomation' />
                     <div className='small-img-row'>
                         <div className='small-img-col'>
-                            <img src='images/product-1.jpg' width='100%' />
+                            <img src='/images/product-1.jpg' width='100%' alt='infomation' />
                         </div>
                         <div className='small-img-col'>
-                            <img src='images/product-1.jpg' width='100%' />
+                            <img src='/images/product-1.jpg' width='100%' alt='infomation' />
                         </div>
                         <div className='small-img-col'>
-                            <img src='images/product-1.jpg' width='100%' />
+                            <img src='/images/product-1.jpg' width='100%' alt='infomation' />
                         </div>
                         <div className='small-img-col'>
-                            <img src='images/product-1.jpg' width='100%' />
+                            <img src='/images/product-1.jpg' width='100%' alt='infomation' />
                         </div>
-
-
                     </div>
 
 
                 </div>
                 <div className="col-2">
                     <p>Home / T-Shirt</p>
-                    <h1>{product.name}</h1>
-                    <h4>${product.originalPrice}</h4>
+                    <h1>{name}</h1>
+                    <h4>${originalPrice}</h4>
                     <StarRating />
                     <select>
                         <option value="">Select Size</option>
@@ -65,6 +66,7 @@ function ProductDetail(props) {
 
                     <input type="number" min={1} value={count} onChange={(e) => setCount(e.target.value)} />
                     <a
+                    href='!#'
                         className='btn'
                         onClick={() => handleAddToCart()}
                     >

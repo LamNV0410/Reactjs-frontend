@@ -7,19 +7,19 @@ function Brand(props) {
             <div className="small-container">
                 <div className="row">
                     <div className="col-5">
-                        <img src="images/logo-godrej.png" />
+                        <img src="images/logo-godrej.png" alt='information' />
                     </div>
                     <div className="col-5">
-                        <img src="images/logo-oppo.png" />
+                        <img src="images/logo-oppo.png" alt='information' />
                     </div>
                     <div className="col-5">
-                        <img src="images/logo-coca-cola.png" />
+                        <img src="images/logo-coca-cola.png" alt='information' />
                     </div>
                     <div className="col-5">
-                        <img src="images/logo-paypal.png" />
+                        <img src="images/logo-paypal.png" alt='information' />
                     </div>
                     <div className="col-5">
-                        <img src="images/logo-godrej.png" />
+                        <img src="images/logo-godrej.png" alt='information' />
                     </div>
                 </div>
             </div>

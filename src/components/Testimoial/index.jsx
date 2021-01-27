@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function Testimoial(props) {
     // get Testimoial State
-    const [testimoial, useTestimoial] = useState();
 
     // get Testimoial from API or dedux store
     useEffect(() => {
@@ -27,7 +26,7 @@ function Testimoial(props) {
                             <i className="fa fa-star" />
                             <i className="fa fa-star-o" />
                         </div>
-                        <img src="images/user-1.png" />
+                        <img src="images/user-1.png" alt='infomation' />
                         <h3>Sean Parker</h3>
                     </div>
                     <div className="col-3">
@@ -45,7 +44,7 @@ function Testimoial(props) {
                             <i className="fa fa-star" />
                             <i className="fa fa-star-o" />
                         </div>
-                        <img src="images/user-2.png" />
+                        <img src="images/user-2.png" alt='infomation' />
                         <h3>Joshep Lam</h3>
                     </div>
                     <div className="col-3">
@@ -63,7 +62,7 @@ function Testimoial(props) {
                             <i className="fa fa-star" />
                             <i className="fa fa-star-o" />
                         </div>
-                        <img src="images/user-3.png" />
+                        <img src="images/user-3.png" alt='infomation' />
                         <h3>Sean Parker</h3>
                     </div>
                 </div>
